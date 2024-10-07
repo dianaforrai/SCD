@@ -27,7 +27,9 @@ ss = new ServerSocket(1900);    //crează obiectul serversocket
     String input = "";
     Scanner scanner = new Scanner(System.in);
     while (!input.equals("END")) {
-        out.println("s: " + input);
+        if (!input.isEmpty()) {
+            out.println("s: " + input);
+        }
         String str = in.readLine();       //primeste mesaj
         System.out.println(str);         //aşteaptă răspuns
         System.out.print(">");

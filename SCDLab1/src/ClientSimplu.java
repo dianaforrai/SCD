@@ -22,7 +22,9 @@ public class ClientSimplu {
             while (!input.equals("END")) {
                 System.out.print(">");
                 input = scanner.next();
-                out.println("c: " + input);
+                if (!input.isEmpty()) {
+                    out.println("c: " + input);
+                }
                 String str = in.readLine();       //trimite mesaj
                 System.out.println(str);         //aşteaptă răspuns
             }
